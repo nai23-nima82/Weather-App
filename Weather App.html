@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="Weather App.css">
+    <link rel="icon" href="./Weather Icons/Weather-App.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+<header>
+    <h3><i class="fa-solid fa-cloud-moon"></i>Weather Now</h3>
+    <div class="unit-button">
+        <button data-unit="Celsius"><i class="fa-solid fa-gear"></i>Celsius<i class="fa-solid fa-chevron-down"></i></button>
+        <div class="unit-dropdown-menu">
+            <ul>
+                <li data-unit="Fahrenheit">Fahrenheit</li>
+                <li data-unit="Celsius">Celsius</li>
+            </ul>
+        </div>
+    </div>
+</header>
+<body>
+    <main>
+        <h1>How's The Sky Looking Today?</h1>
+        <div class="search-button-input">
+            <div>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-circle-notch input-spinner"></i>
+                <input type="text" placeholder="Search a City..." id="search-input">
+                <div class="search-result-dropdown">
+                    <ul>
+                        
+                    </ul>
+                </div>
+            </div>
+            <button id="search-button">Search</button>
+        </div>
+        <div class="weather-data"> 
+            <div class="main-banner">
+                <p id="unit-holder"></p>
+                <div class="country-date">
+                    <h3 id="country-name">Berlin, Germany</h3>
+                    <p id="date">Tuesday. Agu 5, 2025</p>
+                </div>
+                <div class="temp-at-the-moment">
+                    <img src="./Weather Icons/clear-day.svg" alt="">
+                    <h1>20</h1>
+                </div>
+            </div>
+            <div class="weather-summary">
+                <ul>
+                    <li>
+                        <p>Feels Like</p>
+                        <h2 id="feels-like">18</h2>
+                    </li>
+                    <li>
+                        <p>Humidity</p>
+                        <h2 id="humidity">46%</h2>
+                    </li>
+                    <li>
+                        <p>Wind</p>
+                        <h2 id="wind">14 km/h</h2>
+                    </li>
+                    <li>
+                        <p>Precipitation</p>
+                        <h2 id="precipitation">0 mm</h2>
+                    </li>
+                </ul>
+            </div>
+            <div class="daily-forcast">
+                <h3>Daily forcast</h3>
+                <ul>
+                    <li>
+                        <p>Tue</p>
+                        <img src="./Weather Icons/clear-day.svg" alt="" class="week-weather-icon">
+                        <div class="minmax-temp">
+                            <p>20</p>
+                            <p>14</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Wed</p>
+                        <img src="./Weather Icons/clear-day.svg" alt="" class="week-weather-icon">
+                        <div class="minmax-temp">
+                            <p>21</p>
+                            <p>15</p>
+                        </div>  
+                    </li>
+                    <li>
+                        <p>Thu</p>
+                        <img src="./Weather Icons/clear-day.svg" alt="" class="week-weather-icon">
+                        <div class="minmax-temp">
+                            <p>24</p>
+                            <p>14</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Fri</p>
+                        <img src="./Weather Icons/clear-day.svg" alt="" class="week-weather-icon">
+                        <div class="minmax-temp">
+                            <p>25</p>
+                            <p>13</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Sat</p>
+                        <img src="./Weather Icons/clear-day.svg" alt="" class="week-weather-icon">
+                        <div class="minmax-temp">
+                            <p>21</p>
+                            <p>15</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Sun</p>
+                        <img src="./Weather Icons/clear-day.svg" alt="" class="week-weather-icon">
+                        <div class="minmax-temp">
+                            <p>25</p>
+                            <p>16</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Mon</p>
+                        <img src="./Weather Icons/clear-day.svg" alt="" class="week-weather-icon">
+                        <div class="minmax-temp">
+                            <p>24</p>
+                            <p>15</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="hourly-forcast">
+                <div>
+                    <h3>Hourly forcast</h3>
+                    <div class="weekday-dropdown">
+                        <button id="week-button">Tuesday<i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="weekday-list">
+                            <ul>
+                                <li data-day="Saturday">Saturday</li>
+                                <li data-day="Sunday">Sunday</li>
+                                <li data-day="Monday">Monday</li>
+                                <li data-day="Tuesday">Tuesday</li>
+                                <li data-day="Wednesday">Wednesday</li>
+                                <li data-day="Thursday">Thurdsday</li>
+                                <li data-day="Friday">Friday</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <li>
+                        <div class="img-hour">
+                            <img src="./Weather Icons/clear-night.svg" alt="" class="hourly-weather-icon">
+                            <h3 class="hour">3 pm</h3>
+                        </div>
+                        <p class="hourly-temp">30</p>
+                    </li>
+                    <li>
+                        <div class="img-hour">
+                            <img src="./Weather Icons/overcast-day-fog.svg" alt="" class="hourly-weather-icon">
+                            <h3 class="hour">3 pm</h3>
+                        </div>
+                        <p class="hourly-temp">30</p>
+                    </li>
+                    <li>
+                        <div class="img-hour">
+                            <img src="./Weather Icons/clear-day.svg" alt="" class="hourly-weather-icon">
+                            <h3 class="hour">3 pm</h3>
+                        </div>
+                        <p class="hourly-temp">30</p>
+                    </li>
+                    <li>
+                        <div class="img-hour">
+                            <img src="./Weather Icons/clear-day.svg" alt="" class="hourly-weather-icon">
+                            <h3 class="hour">3 pm</h3>
+                        </div>
+                        <p class="hourly-temp">30</p>
+                    </li>
+                    <li>
+                        <div class="img-hour">
+                            <img src="./Weather Icons/clear-day.svg" alt="" class="hourly-weather-icon">
+                            <h3 class="hour">3 pm</h3>
+                        </div>
+                        <p class="hourly-temp">30</p>
+                    </li>
+                    <li>
+                        <div class="img-hour">
+                            <img src="./Weather Icons/clear-day.svg" alt="" class="hourly-weather-icon">
+                            <h3 class="hour">3 pm</h3>
+                        </div>
+                        <p class="hourly-temp">30</p>
+                    </li>
+                    <li>
+                        <div class="img-hour">
+                            <img src="./Weather Icons/clear-day.svg" alt="" class="hourly-weather-icon">
+                            <h3 class="hour">3 pm</h3>
+                        </div>
+                        <p class="hourly-temp">30</p>
+                    </li>
+                    <li>
+                        <div class="img-hour">
+                            <img src="./Weather Icons/clear-day.svg" alt="" class="hourly-weather-icon">
+                            <h3 class="hour">3 pm</h3>
+                        </div>
+                        <p class="hourly-temp">30</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer class="last">
+        <a id="credits" href="https://open-meteo.com/"> <img src="./Weather Icons/Open-Meteo.png" alt="">Weather Data by Open-Meteo</a>
+    </footer>
+    <script src="Weather App.js"></script>
+</body>
+
+</html>
